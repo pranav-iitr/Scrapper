@@ -69,8 +69,11 @@ def get_explanation(elem):
         return "no explanation"
 
 driver = webdriver.Chrome()
-
+#change the url here
 input_url="https://questions.examside.com/past-years/jee/question/pmatch-list-i-with-list-ii-p-pstyle-typetextcss-jee-main-physics-motion-aqfllelnyaim2mz5"
+subject=""
+chapter=""
+
 rt=0
 dic_json=[]
 while rt<10:
@@ -97,6 +100,8 @@ while rt<10:
         d_t["option3"]=a["C"]
         d_t["option4"]=a["D"]
         d_t["correct"]=ansDict[c]    
+        d_t["subject"]=subject
+        d_t["chapter"]=chapter
             
         d_t["explanation"]=e
 
